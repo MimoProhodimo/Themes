@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="telegram:channel" content="@Aboba_Bubovich_Bot" />
+    <title>Конструктор тем Telegram</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🎨 Конструктор тем</h1>
+        <p class="subtitle">Создайте уникальную тему для Telegram</p>
+      </header>
+
+      <main>
+        <div class="theme-settings">
+          <div class="setting">
+            <label>Название темы:</label>
+            <input
+              type="text"
+              id="themeName"
+              placeholder="Моя крутая тема"
+              value="Моя тема"
+            />
+          </div>
+
+          <div class="color-grid">
+            <div class="color-setting">
+              <label>Фон</label>
+              <input type="color" id="bgColor" value="#1a1a1a" />
+              <span id="bgHex">#1a1a1a</span>
+            </div>
+
+            <div class="color-setting">
+              <label>Акцент</label>
+              <input type="color" id="accentColor" value="#0088cc" />
+              <span id="accentHex">#0088cc</span>
+            </div>
+
+            <div class="color-setting">
+              <label>Текст</label>
+              <input type="color" id="textColor" value="#ffffff" />
+              <span id="textHex">#ffffff</span>
+            </div>
+          </div>
+
+          <div class="preview-toggle">
+            <button id="togglePreview">👁️ Показать превью</button>
+          </div>
+        </div>
+
+        <div class="theme-preview" id="themePreview">
+          <div class="preview-header">
+            <div class="preview-nav">
+              <span>Чаты</span>
+              <span style="color: var(--accent)">Звонки</span>
+              <span>Контакты</span>
+              <span>Настройки</span>
+            </div>
+          </div>
+
+          <div class="preview-chats">
+            <div class="chat-item">
+              <div class="chat-avatar" style="background: var(--accent)">A</div>
+              <div class="chat-info">
+                <div class="chat-name">Андрей</div>
+                <div class="chat-message">Привет! Как дела?</div>
+              </div>
+              <div class="chat-time">12:30</div>
+            </div>
+
+            <div class="chat-item active">
+              <div class="chat-avatar" style="background: var(--accent)">Т</div>
+              <div class="chat-info">
+                <div class="chat-name">Телеграм</div>
+                <div class="chat-message">Обновление темы доступно</div>
+              </div>
+              <div class="chat-time">11:45</div>
+            </div>
+
+            <div class="chat-item">
+              <div class="chat-avatar">Г</div>
+              <div class="chat-info">
+                <div class="chat-name">Группа</div>
+                <div class="chat-message">Иван: Всем привет!</div>
+              </div>
+              <div class="chat-time">10:20</div>
+            </div>
+          </div>
+
+          <div class="preview-input">
+            <div class="input-area">
+              <span>✏️</span>
+              <input type="text" placeholder="Сообщение" disabled />
+            </div>
+            <button class="send-btn" style="background: var(--accent)">
+              ➤
+            </button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="generateBtn" class="btn-primary">🎨 Создать тему</button>
+          <button id="randomBtn" class="btn-secondary">
+            🎲 Случайная тема
+          </button>
+        </div>
+
+        <div class="instructions">
+          <h3>📱 Как установить:</h3>
+          <ol>
+            <li>Настройте цвета выше</li>
+            <li>Нажмите "Создать тему"</li>
+            <li>Вернитесь в Telegram бота</li>
+            <li>Нажмите "Установить тему"</li>
+          </ol>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
