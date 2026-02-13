@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 // Инициализация Telegram Web App
 const tg = window.Telegram.WebApp;
 
@@ -129,3 +130,4 @@ themePreview.classList.add("show");
 togglePreview.textContent = "👁️ Скрыть превью";
 
 console.log("✅ Script loaded, tg:", tg);
+});
